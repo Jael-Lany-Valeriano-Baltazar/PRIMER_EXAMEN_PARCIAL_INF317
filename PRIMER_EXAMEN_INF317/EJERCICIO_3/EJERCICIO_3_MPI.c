@@ -23,9 +23,9 @@ int main(int argc, char** argv) {
   MPI_Reduce(&is_palindrome, &global_is_palindrome, 1, MPI_INT, MPI_LAND, 0, MPI_COMM_WORLD);
   if (rank == 0) {
     if (global_is_palindrome) {
-      printf("La palabra %s es un palindromo\n", word);
+      printf(" > %s es un palindromo\n", word);
     } else {
-      printf("La palabra %s no es un palindromo\n", word);
+      printf(" > %s no es un palindromo\n", word);
     }
   }
   MPI_Finalize();
