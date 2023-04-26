@@ -4,7 +4,7 @@
 
 int main(int argc, char** argv) {
   int rank, size;
-  char word[] = "anitalavalatina"; // palabra a verificar
+  char word[] = "reconocer"; // palabra a verificar
   int n = strlen(word);
   int is_palindrome = 1; // asumimos que la palabra es un palindromo
   MPI_Init(&argc, &argv);
