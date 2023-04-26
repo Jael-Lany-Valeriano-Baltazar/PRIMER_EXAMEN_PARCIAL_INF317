@@ -4,16 +4,16 @@
 
 int main(int argc, char** argv) {
   int rank, size;
-  char word[] = "reconocer"; // palabra a verificar
+  char word[] = "reconocer"; 
   int n = strlen(word);
-  int is_palindrome = 1; // asumimos que la palabra es un palindromo
+  int is_palindrome = 1; 
   MPI_Init(&argc, &argv);
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
   MPI_Comm_size(MPI_COMM_WORLD, &size);
   if (rank == 0) {
     for (int i = 0; i < n / 2; i++) {
       if (word[i] != word[n - i - 1]) {
-        is_palindrome = 0; // si los caracteres no coinciden, no es un palindromo
+        is_palindrome = 0;
         break;
       }
     }
