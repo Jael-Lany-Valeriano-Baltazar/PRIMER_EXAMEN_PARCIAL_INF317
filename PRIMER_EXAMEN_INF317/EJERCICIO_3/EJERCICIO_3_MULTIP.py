@@ -4,7 +4,7 @@ def is_palindrome(word):
     return word == word[::-1]
 
 if __name__ == '__main__':
-    word = "anitalavalatinas"
+    word = "reconocer"
     with Pool() as p:
         result = p.apply(is_palindrome, args=(word,))
     if result:
